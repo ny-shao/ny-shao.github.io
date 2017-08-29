@@ -15,7 +15,6 @@ There are many ways to do it. And the solutions I prefer are `bedtools` and `GNU
 Things like this:
 ```shell
 sortBed -i A.bed > A_sorted.bed
-{% endhighlight %}
 ```
 
 But `sortBed` of `bedtools` needs big memory of the server, so I also somtimes use `GNU sort`. `sort` utility in [GNU coreutils](http://www.gnu.org/software/coreutils/) now supports parallel computing and large cache.
