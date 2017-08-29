@@ -14,7 +14,9 @@ There are many ways to do it. And the solutions I prefer are `bedtools` and `GNU
 
 Things like this:
 ```
+{% highlight bash %}
 sortBed -i A.bed > A_sorted.bed
+{% endhighlight %}
 ```
 
 But `sortBed` of `bedtools` needs big memory of the server, so I also somtimes use `GNU sort`. `sort` utility in [GNU coreutils](http://www.gnu.org/software/coreutils/) now supports parallel computing and large cache.
@@ -24,6 +26,8 @@ Because generally our Linux servers are old RHEL or somethings old, so I general
 So a typical command is:
 
 ```
+{% highlight bash %}
 gsort --parallel=16 -S 20G -k1,1 -k2,2n -k6,6 A.bed > A_sorted.bed
+{% endhighlight %}
 ```
 Here `16` are the cores used in sorting, and 20G is the cache size. `gsort` will sort the chromosome names firstly then the start position, then the strands.
