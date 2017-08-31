@@ -16,7 +16,7 @@ H7-hESC_H3K27me3_0d_rep2	ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/
 The ideally outputs were the fastq files named as "H7-hESC\_H3K27me3\_0d\_rep1.fastq", and "H7-hESC\_H3K27me3\_0d_rep2.fastq".
 So I wrote an R script to do this. My first idea is to use Bash, but finally I thought R is a good option. So here it is the R script:
 
-```pretyprint lang-R
+```r
 #! /usr/bin/env Rscript
 
 # Read # col1 file name and #col2 SRA links to download and rename the fastq files.
