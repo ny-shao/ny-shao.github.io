@@ -36,7 +36,7 @@ And RStudio could be installed from the pre-built binary files downloaded from o
 
 There is always an issue to work in the windows environment as a bioinformatician, as Linux is dominant in the scientific computation, but generally people need windows as it is the dominant OS in desktop. I list my solutions here, but the final solution is a Linux VM or Linux Desktop.
 
-* PuTTY is the mostly widely used SSH and Telnet implementation of Windows. I use [PuTTYTray](https://puttytray.goeswhere.com/), an improved version of PuTTy. 
+* PuTTY is the mostly widely used SSH and Telnet implementation of Windows. I use [PuTTYTray](https://puttytray.goeswhere.com/), an improved version of PuTTy.
 * I don't like the original default display settings, it is ugly when you use ncureses application like `mc`, so [Tango Themes](https://madyogi.wordpress.com/tag/putty-tango-theme/) was used. To use it:
     * Import the `putty tango theme.reg` file into registery of windows
     * When set up a new PuTTY session, firstly load `tango theme`, then edit the settings of `Host Name`, `port` and things you want to set, change the name, and save the new named session.
@@ -94,11 +94,11 @@ sudo gdebi shiny-server-1.2.1.362-amd64.deb
 To save space of the `/home` folder (such as you use limited space SSD), we may setup R_LIBS at other folder (as remote file server). In such case, we need to do somethings for `~/.bash_profile` (for R console) and `~/.Renviron`.
 
 In `~/.bash_profile`, we add:
-```
+```shell
 export R_LIBS=/media/your_remote_fileserver/RLIBS
 ```
 And in `~/.Renviron`, we add:
-```
+```shell
 R_LIBS=/media/your_remote_fileserver/RLIBS
 ```
 Now all R libraries will firstly installed at remote server, and save a lot space for your home folder!
@@ -109,10 +109,10 @@ Now all R libraries will firstly installed at remote server, and save a lot spac
 ```shell
 > ssh-keygen
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/ny.shao/.ssh/id_rsa): 
+Enter file in which to save the key (/home/ny.shao/.ssh/id_rsa):
 Created directory '/home/ny.shao/.ssh'.
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in /home/ny.shao/.ssh/id_rsa.
 Your public key has been saved in /home/ny.shao/.ssh/id_rsa.pub.
 The key fingerprint is:
@@ -130,11 +130,11 @@ The key's randomart image is:
 Once your desktop has the key, you can just use it in the future, don't need to run it again.
 
 * Copy your desktop key to remote servers.
-```pretyprint lang-bash
+```shell
 ssh-copy-id user@remote-server.edu
 ```
 If your remote server use different port, saying port `123456`:
-```pretyprint lang-bash
+```shell
 ssh-copy-id -p 123456 user@remote-server.edu
 ```
 
@@ -175,7 +175,7 @@ Host your_sever_ssh
 
 Then if you want ssh login your server, you could:
 
-```
+```shell
 ssh -XC your_server_ssh
 ```
 
@@ -240,7 +240,7 @@ I also move my path of R packages to `~/opt/Rpack` to make it easy to be tracked
 ```shell
 ./bootstrap --prefix ~/opt/pkg_installation_date --unprivileged
 ```
-  
+
   After it, add `~/opt/pkg_installation_date/bin` to your `$PATH`, that's it!
 When you want to add some software, saying `tmux`, just go to `~/opt/tmp/pkg_source_installation_date/misc/tmux`, then:
 
@@ -256,9 +256,9 @@ bmake install
   * `Virtualenv`. It is powerful, but I don't use it.
   * [`Enthought Canopy`](https://www.enthought.com/products/epd/) is a pre-built python bundle, could be installed under your home folder, and it is free for academic users. But I don't use it now.
   * [`Anaconda`](https://store.continuum.io/cshop/anaconda/). Another pre-built python bundle, and I am using it now.
-  
+
   I use `Anaconda` or `Canopy` because they integerate many math packages, such as `numpy`, `scipy`, and `matplotlib`. If you want to install them manually, it will be tedious and trouble.
-  
+
 * Perl. I use [`Active Perl`](http://www.activestate.com/activeperl/downloads).
 
 ## Misc
