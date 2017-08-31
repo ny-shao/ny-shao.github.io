@@ -143,8 +143,10 @@ ssh-copy-id -p 123456 user@remote-server.edu
 cd ~/.ssh
 touch config
 ```
+
 Then open the config file with editor you prefer, add cotent like this:
-```
+
+```shell
 Host *
   ServerAliveInterval 120
 
@@ -156,11 +158,12 @@ Host your_server_ssh
   RemoteForward 52698 localhost:52698
   Port you_port
 ```
+
 For the first section, I set a "heartbeat" for all ssh connections, and it will send a heartbeat every 120 seconds to keep the ssh connection alive.
 In the next section, `user` is the user name, and `you_port` is the specific port for ssh if the server set. If default 22 port used, then line `Port` could be skipped. `RemoteForward` of port 52698 is set for `rmate` for the local `Atom` or `Sublime text` editor, you may modify it, but don't forget to change the port number in `rmate` then.
 
 If the company or school has a "__gate__" node to login, you may follow this:
-```
+```shell
 Host gate
   ControlMaster auto
   ControlPath /tmp/ssh_mux_%h_p_%r
@@ -194,7 +197,7 @@ Later I will edit `.bashrc` to add paths under `~/opt/app` automatically.
 rmate test.txt
 ```
 Then you should find test.txt in your local atom window. If you get:
-```
+```shell
 connect_to localhost port 52698: failed.
 ```
 Then you need to start atome rmate server: in Atom, `Packages` => `Remote Atom` => `Start Server`.
@@ -244,7 +247,7 @@ I also move my path of R packages to `~/opt/Rpack` to make it easy to be tracked
   After it, add `~/opt/pkg_installation_date/bin` to your `$PATH`, that's it!
 When you want to add some software, saying `tmux`, just go to `~/opt/tmp/pkg_source_installation_date/misc/tmux`, then:
 
-```
+```shell
 bmake
 bmake install
 ```
