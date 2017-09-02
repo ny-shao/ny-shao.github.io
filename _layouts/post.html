@@ -12,7 +12,7 @@ comments: true
         {{ page.date | date: date_format }}
       </time>
       {% if page.comments %}
-        • <a href="https://ny-shao.name{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
+        • <a href="{{ page.url }}#disqus_thread"> Comments</a>{% endif %}
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
