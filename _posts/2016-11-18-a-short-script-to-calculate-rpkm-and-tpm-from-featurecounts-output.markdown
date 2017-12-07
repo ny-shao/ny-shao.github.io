@@ -21,7 +21,7 @@ Today one of my friends asked me about the easy way to calculate the RPKM and TP
 ## from https://www.biostars.org/p/171766/
 rpkm <- function(counts, lengths) {
   rate <- counts / lengths
-  rate / sum(counts) * 1e6
+  rate / sum(counts) * 1e9
 }
 
 tpm <- function(counts, lengths) {
