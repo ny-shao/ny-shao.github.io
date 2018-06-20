@@ -12,9 +12,9 @@ Currently I prefer to use HISAT2, featureCounts and DESeq2 for my RNA-seq analys
 
 Today one of my friends asked me about the easy way to calculate the RPKM and TPM except Cufflinks. Here is my script for the solution. It's written in half hour, so please ignore the ugly styple...
 
-Update 2018/06/19
+__Update 2018/06/19__
 
-Thanks to JianMing Zeng of Macau University, a bug was found as I forgot to group by the samples when I calculate TPM. It's a tricky thing to converst the old style to dplyr style...
+Thanks to JianMing Zeng of Macau University, a bug was found as I forgot to group by the samples when I calculate TPM. It's a tricky thing to convert the old style code to dplyr style...
 
 ```r
 
