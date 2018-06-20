@@ -43,6 +43,7 @@ library(tidyr)
 
 ftr.rpkm <- ftr.cnt %>%
   gather(sample, cnt, 7:ncol(ftr.cnt)) %>%
+  group_by(sample) %>%
   mutate(rpkm=rpkm(cnt, Length)) %>%
   select(-cnt) %>%
   spread(sample, rpkm)
