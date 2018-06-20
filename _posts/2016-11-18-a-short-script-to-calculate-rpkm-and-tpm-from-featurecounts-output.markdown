@@ -12,6 +12,10 @@ Currently I prefer to use HISAT2, featureCounts and DESeq2 for my RNA-seq analys
 
 Today one of my friends asked me about the easy way to calculate the RPKM and TPM except Cufflinks. Here is my script for the solution. It's written in half hour, so please ignore the ugly styple...
 
+Update 2018/06/19
+
+Thanks to JianMing Zeng of Macau University, a bug was found as I forgot to group by the samples when I calculate TPM. It's a tricky thing to converst the old style to dplyr style...
+
 ```r
 
 #! /usr/bin/env Rscript
@@ -46,6 +50,7 @@ write.table(ftr.rpkm, file=paste0(tag, "_rpkm.txt"), sep="\t", row.names=FALSE, 
 
 ftr.tpm <- ftr.cnt %>%
   gather(sample, cnt, 7:ncol(ftr.cnt)) %>%
+  group_by(sample) %>%
   mutate(tpm=tpm(cnt, Length)) %>%
   select(-cnt) %>%
   spread(sample, tpm)
