@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Empty Brain
-email: i@ny-shao.name
+title: Shao Lab @ University of Macau
+email: nshao@shaolab.eu.org
 description: > # this means to ignore newlines until "baseurl:"
   A personal blog of myself, Ning-Yi SHAO, a postdoc of Stanford University
   School of Medicine, focusing on the things I feel interesting, mostly about
   bioinformatics, evolution, and medicine.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.ny-shao.name" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://shaolab.eu.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sny_cn
 github_username:  ny-shao
 
