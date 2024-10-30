@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-A personal blog of myself, Ning-Yi SHAO, an asistant professor of Faculty of Health Sciences, University of Macau, focusing on the things I feel interesting, mostly about
+A personal blog of myself, Ning-Yi SHAO, an associate professor of Faculty of Health Sciences, University of Macau, focusing on the things I feel interesting, mostly about
 bioinformatics, evolution, and medicine.
 
 This site was build on Jekyll.
