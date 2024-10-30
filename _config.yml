@@ -16,8 +16,7 @@
 title: Shao Lab @ University of Macau
 email: nshao@shaolab.eu.org
 description: > # this means to ignore newlines until "baseurl:"
-  A personal blog of myself, Ning-Yi SHAO, a postdoc of Stanford University
-  School of Medicine, focusing on the things I feel interesting, mostly about
+  A lab blog for SHAO Ning-Yi, an associate professor of University of Macau, focusing on the things I feel interesting, mostly about
   bioinformatics, evolution, and medicine.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://shaolab.eu.org" # the base hostname & protocol for your site, e.g. http://example.com
